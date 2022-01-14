@@ -8,8 +8,6 @@ body{
 
 /*  section 1 */
 .page-1 {
-    /* padding: 1%; */
-    /* margin: 4%; */
     width: 100%;
     height: 500px;
     background-color:hotpink;
@@ -17,13 +15,9 @@ body{
 
 .hero-container {
     position: relative;
-    background-image: url(/SE-Bootcamp-2022/img/valley.jpg);
-    /* display: flex; */
-    /* height: 1000px; */
-    /* width: 100%; */
+    background-image: url(valley.jpg);
     height: 100%;
     background-position: center;
-    /* border: 2px solid white; */
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -55,41 +49,15 @@ body{
 /*  section 2 */
 
 .page-2 {
-    /* display: flex; */
     width: 100%;
     height: 900px;
-    /* padding-top: 20%; */
-    /* padding-left: 40%; */
-    /* align-items: center; */
-    /* max-height: 290px; */
     background-color: palegreen;
     background-color: rgba(43, 2, 2, 0.45);
     background-image: url(tower.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 2%;
-    /* position: relative; */
-    /* height: 600px; note: percent only works if body has a px height declared */
 }
-
-/* .clock img {
-    display: block;
-    max-width:430px;
-    max-height:305px;
-    width: auto;
-    height: 100%;
-} */
-
-/* .clock {
-    width: 50%;
-    height: 100%;
-    background-image: url(clockimage.png);
-    background-size: 94%;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    padding-top: 17.7%;
-    position:relative;
-} */
 
 .clock {
     border-radius: 50%;
