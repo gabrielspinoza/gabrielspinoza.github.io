@@ -173,10 +173,11 @@ body {
 }
 
 .block1 p {
-    margin-top: 50%;
+    margin-top: 40%;
     margin-left: 10%;
     margin-right: 10%;
     border: 1px solid rgb(44, 199, 165);
+    font-size: 30px;
 }
 
 .block2 {
@@ -189,6 +190,10 @@ body {
     background-size:cover;
     border-radius: 5px;
     border: 2px solid white;
+}
+
+.block2 p{
+    font-size: 20px;
 }
 
 .block2 span{
@@ -524,6 +529,10 @@ nav > ul > li > div > h5 {
 
     .block1 p {
         font-size: 13px;
+    }
+
+    .block2 p{
+        font-size: 12px;
     }
 
     .subtitle, .item > p {
