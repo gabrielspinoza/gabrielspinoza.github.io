@@ -3,7 +3,6 @@ let randomNumber = Math.trunc(Math.random() * 100 + 1);
 let score = 10;
 let currentHighScore = 0;
 let guessHistory = [];
-
 // display current random number
 console.log(`The random number is ${randomNumber}`);
 
@@ -15,9 +14,9 @@ function displayContainer(container) {
         document.getElementById("gameover").style.zIndex = "2";
 
         document.getElementById("correcText").innerHTML = `Your guess was correct. <span id="textNumber">${randomNumber}</span> is my secret number.`;
-        document.getElementById("textNumber").style.fontWeight = "bold";
-        document.getElementById("textNumber").style.fontSize = "30px";
-        document.getElementById("textNumber").style.color = "gold";
+        // document.getElementById("textNumber").style.fontWeight = "bold";
+        // document.getElementById("textNumber").style.fontSize = "30px";
+        // document.getElementById("textNumber").style.color = "gold";
 
         document.getElementById("scoretext").innerHTML = `Your score : ${score}`;
         document.getElementById("bestText").innerHTML = `Best: ${currentHighScore}`;
@@ -74,13 +73,13 @@ function checkguess(guess) {
         displayContainer("gamewin");
     } else if (guess < randomNumber){
         // too low
-        document.getElementById("info-label").innerHTML = `Your guess ${guess} is too low`;
+        document.getElementById("info-label").innerHTML = `Your guess <span id="textNumber">${guess}</span> is too low`;
         // update score
         score--;
         document.getElementById("score").innerHTML = `Score: ${score}`;
     } else {
         // too high
-        document.getElementById("info-label").innerHTML = `Your guess ${guess} is too high`;
+        document.getElementById("info-label").innerHTML = `Your guess <span id="textNumber">${guess}</span>  is too high`;
         // update score
         score--;
         document.getElementById("score").innerHTML = `Score :${score}`;
@@ -106,17 +105,23 @@ function processInput() {
 }
 
 // resets fields for a new gameplay
-function resetFields(){
+function resetFields(state){
     // reset fields
+    guessHistory = [];
     document.getElementById("text-field").value = "";
     displayContainer("gameplay");
     randomNumber = Math.trunc(Math.random() * 100 + 1);
-    document.getElementById("highscore").innerHTML = "High Score: 10";
-    currentHighScore = 10;
-    document.getElementById("score").innerHTML = "Score: 0";
+    // display current random number
+    console.log(`The random number is ${randomNumber}`);
+    document.getElementById("score").innerHTML = "Score: 10";
     score = 10;
     document.getElementById("info-label").innerHTML = "Enter a number";
     document.getElementById("guess-list").innerHTML = "";
+
+    if (state == "reset"){
+        document.getElementById("highscore").innerHTML = "High Score: 0";
+        currentHighScore = 0;
+    }
 }
 
 // add action listener to check button
@@ -126,15 +131,15 @@ document.getElementById('check-guess').addEventListener('click', function () {
 
 // add action listener to reset button 
 document.getElementById('reset').addEventListener('click', function () {
-    resetFields();
+    resetFields("reset");
 });
 
 // // add action listener to play again button 
 document.getElementById('play-again').addEventListener('click', function () {
-    resetFields();
+    resetFields("clear");
 });
 
 // // add action listener to try again button 
 document.getElementById('try-again').addEventListener('click', function () {
-    resetFields();
+    resetFields("clear");
 });
