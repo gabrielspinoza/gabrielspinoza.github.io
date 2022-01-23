@@ -42,14 +42,14 @@ function checkHighScore(score) {
 // validates the input of the user
 function validateInput(guess) {
     if (isNaN(guess)) {
-        document.getElementById("info-label").innerHTML = "please enter numbers only not letters";
+        document.getElementById("info-label").innerHTML = "Please enter numbers only not letters";
         return false;
     }  else if (guess === "") {
         document.getElementById("info-label").innerHTML = "Please enter a number!";
     }  else if (guessHistory.includes(guess)) {
         document.getElementById("info-label").innerHTML = "You already made that guess, try again";
     } else if (guess > 100 || guess < 1) {
-        document.getElementById("info-label").innerHTML = "enter number between 1 and 100";
+        document.getElementById("info-label").innerHTML = "The number should be between 1 and 100";
         return false;
     } else {
         // store guess
