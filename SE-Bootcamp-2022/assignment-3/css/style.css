@@ -17,7 +17,7 @@ body{
 
 .hero-container {
     position: relative;
-    background-image: url(/assignment-3/img/valley.jpg);
+    background-image: url(gabrielspinoza.github.io/SE-Bootcamp-2022/assignment-3/img/valley.jpg);
     /* display: flex; */
     /* height: 1000px; */
     /* width: 100%; */
@@ -64,7 +64,7 @@ body{
     /* max-height: 290px; */
     background-color: palegreen;
     background-color: rgba(43, 2, 2, 0.45);
-    background-image: url(/assignment-3/img/tower.jpg);
+    background-image: url(gabrielspinoza.github.io/SE-Bootcamp-2022/assignment-3/img/tower.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 2%;
@@ -93,7 +93,7 @@ body{
 
 .clock {
     border-radius: 50%;
-    background: rgb(231, 181, 14) url(/assignment-3/img/clockimage.png);
+    background: rgb(231, 181, 14) url(gabrielspinoza.github.io/SE-Bootcamp-2022/assignment-3/img/clockimage.png);
     background-size: 88%;
     height: 23em;
     width: 23em;
@@ -117,7 +117,7 @@ body{
 .hour-hand {
     /* background-color: rgba(43, 2, 2, 0.45); */
     position: absolute;
-    background-image: url(/assignment-3/img/hand.png);
+    background-image: url(gabrielspinoza.github.io/SE-Bootcamp-2022/assignment-3/img/hand.png);
     align-items: center;
     background-position-x: center;
     height: 100%;
@@ -130,7 +130,7 @@ body{
 .min-hand {
     /* background-color: rgba(43, 2, 2, 0.45); */
     position: absolute;
-    background-image: url(/assignment-3/img/hand.png);
+    background-image: url(gabrielspinoza.github.io/SE-Bootcamp-2022/assignment-3/img/hand.png);
     align-items: center;
     background-position-x: center;
     height: 133%;
